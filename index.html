@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Pressure Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="max-w-lg w-full bg-white rounded-2xl shadow-xl p-8 m-4">
+    <h1 class="text-2xl font-bold text-gray-800 text-center mb-6">Blood Pressure Tracker</h1>
+    
+    <!-- Form Input -->
+    <div class="space-y-4 mb-6">
+      <div>
+        <label for="sistolik" class="block text-sm font-medium text-gray-700">Sistolik (mmHg)</label>
+        <input type="number" id="sistolik" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Masukkan nilai sistolik">
+      </div>
+      <div>
+        <label for="diastolik" class="block text-sm font-medium text-gray-700">Diastolik (mmHg)</label>
+        <input type="number" id="diastolik" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Masukkan nilai diastolik">
+      </div>
+      <button onclick="simpanData()" class="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-500 transition duration-300">Simpan Pengukuran</button>
+    </div>
+
+    <!-- Hasil dan Riwayat -->
+    <div id="hasil" class="mt-4 p-4 bg-gray-50 rounded-md hidden">
+      <p id="kategori" class="text-lg font-semibold text-gray-800"></p>
+      <p id="deskripsi" class="text-sm text-gray-600 mt-1"></p>
+    </div>
+
+    <h2 class="text-lg font-semibold text-gray-800 mt-8 mb-4">Riwayat Pengukuran</h2>
+    <div id="riwayat" class="space-y-3 max-h-64 overflow-y-auto">
+      <!-- Riwayat akan ditambahkan secara dinamis -->
+    </div>
+    <button onclick="hapusRiwayat()" class="mt-4 w-full bg-red-100 text-red-600 py-2 px-4 rounded-md hover:bg-red-200 transition duration-300">Hapus Semua Riwayat</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
